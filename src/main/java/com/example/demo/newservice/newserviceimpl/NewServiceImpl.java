@@ -26,7 +26,10 @@ public class NewServiceImpl implements NewService{
 
     @Override
     public NewEntity update(Long id, NewEntity st) {
-        
+        NewfileEntity existing = getidval(id);
+        existing.setName(newfile.getName());
+        existing.setEmail(newfile.getEmail());
+        return rep.save(existing);|
     }
 
     @Override
