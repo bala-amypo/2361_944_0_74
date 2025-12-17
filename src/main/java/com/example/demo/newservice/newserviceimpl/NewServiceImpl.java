@@ -1,5 +1,28 @@
 package com.example.demo.newservice.newserviceimpl;
-
+import java.util.*;
+import org.springframework.stereotype.Service;
+import com.example.demo.newentity.NewEntity;
 import com.example.demo.newservice.NewService;
+@Service
+public class NewServiceImpl implements NewService{
+    @Override
+    public NewEntity savedata(NewEntity st) {
+    }
 
-public class NewServiceImpl implements NewService
+    @Override
+    public NewEntity getidval(Long id) {
+    }
+
+    @Override
+    public List<NewEntity> getall() {
+    }
+
+    @Override
+    public NewEntity update(Long id, NewEntity st) {
+    }
+
+    @Override
+    public void delete(Long id){
+
+    }
+}
