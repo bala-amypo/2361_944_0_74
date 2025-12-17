@@ -14,7 +14,7 @@ public class NewController {
         this.ser = ser;
     }
     @PostMapping("/save")
-    public NewEntity save(@RequestBody NewEntity st{
+    public NewEntity save(@RequestBody NewEntity st){
         return ser.savedata(st);
     }
     @GetMapping("/get{id}")
