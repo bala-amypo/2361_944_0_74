@@ -11,10 +11,12 @@ public class NewServiceImpl implements NewService{
     }
     @Override
     public NewEntity savedata(NewEntity st) {
+        return rep.save(st)
     }
 
     @Override
     public NewEntity getidval(Long id) {
+        
     }
 
     @Override
