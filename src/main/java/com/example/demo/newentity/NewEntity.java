@@ -8,6 +8,7 @@ public class NewEntity{
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message="Should not contain spaces")
+    @Colounm(unique=true)
     private String name;
     @NotBlank(message="no blank spaces")
     @Email(message="invalid")
