@@ -16,7 +16,7 @@ public class NewServiceImpl implements NewService{
 
     @Override
     public NewEntity getidval(Long id) {
-        
+        return rep.findById(id)
     }
 
     @Override
