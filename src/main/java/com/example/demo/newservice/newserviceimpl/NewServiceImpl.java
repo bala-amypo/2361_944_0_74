@@ -11,24 +11,26 @@ public class NewServiceImpl implements NewService{
     }
     @Override
     public NewEntity savedata(NewEntity st) {
-        return rep.save(st)
+        return rep.save(st);
     }
 
     @Override
     public NewEntity getidval(Long id) {
-        return rep.findById(id)
+        return rep.findById(id);
     }
 
     @Override
     public List<NewEntity> getall() {
+        return rep.fingAll();
     }
 
     @Override
     public NewEntity update(Long id, NewEntity st) {
+        
     }
 
     @Override
     public void delete(Long id){
-
+        return rep.deleteById(id);
     }
 }
