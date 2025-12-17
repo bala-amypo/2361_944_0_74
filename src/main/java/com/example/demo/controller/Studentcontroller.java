@@ -20,7 +20,7 @@ public class Studentcontroller {
         return src.savedata(st);
     }
     @GetMapping("/get")
-    public List<StudentEntity> getdata(){
+    public List<StudentEntity>getdata(){
        return src.retdata();
      }
     @GetMapping("/getid{id}")
