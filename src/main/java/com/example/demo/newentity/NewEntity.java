@@ -1,6 +1,8 @@
 package com.example.demo.newentity;
 import jakarta.persistence.*;
 import jakarta.validation. constraints.*;
+@Entity
+@Table(name="student")
 public class NewEntity{
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -10,13 +12,13 @@ public class NewEntity{
     @NotBlank(message="no blank spaces")
     @Email(message="invalid")
     private String email;
-    public NewfileEntity(Long id, @NotBlank(message = "Should not contain spaces") String name,
+    public NewEntity(Long id, @NotBlank(message = "Should not contain spaces") String name,
             @NotBlank(message = "no blank spaces") @Email(message = "invalid") String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
-    public NewfileEntity() {
+    public NewEntity() {
     }
     public Long getId() {
         return id;
