@@ -1,11 +1,5 @@
-package com. example . demo . newservice;
+package com.example.demo.newservice.newserviceimpl;
 
-import com.example.demo.newentity.NewEntity;
+import com.example.demo.newservice.NewService;
 
-public class NewService {
-    NewEntity savedata(NewEntity newfile);
-    NewEntity getidval(Long id);
-    List<NewEntity> getall();
-    NewEntity update(Long id,NewEntity st);
-    void delet
-}
+public class NewServiceImpl implements NewService

@@ -1,5 +1,11 @@
-package com.example.demo.newservice;
+package com. example . demo . newservice;
 
-public interface Newservice{
+import com.example.demo.newentity.NewEntity;
 
+public interface NewService {
+    NewEntity savedata(NewEntity newfile);
+    NewEntity getidval(Long id);
+    List<NewEntity> getall();
+    NewEntity update(Long id,NewEntity st);
+    void delete(Long id);
 }
