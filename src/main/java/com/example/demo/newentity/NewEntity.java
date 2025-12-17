@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.validation. constraints.NotBlank;
 public class NewEntity {
     @Id
-    @GeneratedValue(strategy="GenerattionType")
+    @GeneratedValue(strategy = GenerattionType.IDENTITY)
     private Long id;
     @NotBlank(message = "should not contain spaces")
     private String name;
