@@ -1,36 +1,43 @@
 package com.example.demo.newcontroller;
-import java.util.*;
-import org.springframework.web.bind.annotation.*;
-import com.example.demo.newentity.NewEntity;
-import com.example.demo.newservice.Newservice;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import com.example.demo.newentity.NewEntity;
+import com.example.demo.newservice.NewService;
 
 @RestController
 @RequestMapping("/students")
 public class NewController {
+
     @Autowired
-    Newservice ser;
-    public NewController(Newservice ser){
-        this.ser = ser;
-    }
+    private NewService ser;
+
     @PostMapping("/save")
-    public NewEntity save(@RequestBody NewEntity st){
+    public NewEntity save(@RequestBody NewEntity st) {
         return ser.savedata(st);
     }
-    @GetMapping("/get{id}")
-    public NewEntity getById(@PathVariable Long id){
+
+    @GetMapping("/get/{id}")
+    public NewEntity getById(@PathVariable Long id) {
         return ser.getidval(id);
     }
+
     @GetMapping("/all")
-    public List<NewEntity>getAll(){
+    public List<NewEntity> getAll() {
         return ser.getall();
     }
+
     @PutMapping("/update/{id}")
-    public NewEntity update(@PathVariable Long id,@RequestBody NewEntity entity){
+    public NewEntity update(@PathVariable Long id, @RequestBody NewEntity entity) {
         return ser.update(id, entity);
     }
+
     @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable Long id) {
         ser.delete(id);
+        return "Deleted successfully";
     }
 }
